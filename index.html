@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevOps Mini Project — Tools Overview</title>
+  <style>
+    /* ====== Base Styles ====== */
+    :root{
+      --primary:#0078d7;       /* Azure blue vibe */
+      --dark:#1f2937;
+      --light:#f4f6f8;
+      --card:#ffffff;
+      --accent:#10b981;        /* green accent */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui,-apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* ====== Header / Hero ====== */
+    header{
+      background: linear-gradient(120deg, var(--primary), #5aa7ff);
+      color:#fff;
+      padding: 48px 20px 36px;
+      text-align:center;
+    }
+    header h1{margin:0 0 8px;font-size: clamp(28px, 5vw, 40px);}
+    header p{margin:0;opacity:.95}
+
+    /* ====== Nav ====== */
+    .topnav{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .chip{
+      color:#0b1220;
+      background:#eaf4ff;
+      border:1px solid #cfe6ff;
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:14px;
+    }
+
+    /* ====== Container ====== */
+    .container{
+      max-width:1100px;
+      margin: 28px auto;
+      padding: 0 18px 40px;
+    }
+
+    /* ====== Cards Grid ====== */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+      margin-top: 18px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid #e9eef5;
+      border-radius:12px;
+      padding:18px;
+      box-shadow: 0 6px 18px rgba(24,39,75,.06);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(24,39,75,.10);
+    }
+    .card h2{
+      margin:0 0 8px;
+      font-size:20px;
+      color:var(--primary);
+    }
+    .card p{margin:0 0 12px}
+    .badge{
+      display:inline-block;
+      background:#eefbf5;
+      border:1px solid #c9f2e2;
+      color:#065f46;
+      padding:3px 8px;
+      border-radius:6px;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    /* ====== Sections ====== */
+    section h3{
+      margin:28px 0 8px;
+      font-size:22px;
+      color:#0f172a;
+    }
+    .note{
+      background:#fff7ed;
+      border:1px solid #ffd7aa;
+      padding:12px 14px;
+      border-radius:10px;
+      font-size:14px;
+    }
+
+    /* ====== Footer ====== */
+    footer{
+      text-align:center;
+      padding:16px;
+      color:#6b7280;
+      font-size:14px;
+    }
+
+    /* small decorative button */
+    .cta{
+      display:inline-block;
+      margin-top:6px;
+      padding:8px 14px;
+      background:var(--primary);
+      color:#fff;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow: 0 4px 12px rgba(0,120,215,.25);
+    }
+    .cta:hover{filter:brightness(.95)}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>DevOps Tools Overview</h1>
+    <p>A simple mini‑project webpage built with just HTML & CSS</p>
+    <nav class="topnav" aria-label="Quick topics">
+      <span class="chip">CI/CD</span>
+      <span class="chip">Build & Dependencies</span>
+      <span class="chip">Containers</span>
+      <span class="chip">Cloud</span>
+      <span class="chip">Version Control</span>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <!-- Cards -->
+    <div class="grid" role="list">
+      <article class="card" role="listitem">
+        <h2>Jenkins</h2>
+        <p>Open‑source CI/CD server that automates building, testing, and deploying code.</p>
+        <span class="badge">CI/CD</span>
+      </article>
+
+      <article class="card" role="listitem">
+        <h2>Maven</h2>
+        <p>Build automation and dependency management tool, mainly for Java projects.</p>
+        <span class="badge">Build</span>
+      </article>
+
+      <article class="card" role="listitem">
+        <h2>Git</h2>
+        <p>Distributed version control to track changes and collaborate through branches.</p>
+        <span class="badge">VCS</span>
+      </article>
+
+      <article class="card" role="listitem">
+        <h2>Docker</h2>
+        <p>Packages apps and dependencies into portable containers for consistent runs.</p>
+        <span class="badge">Containers</span>
+      </article>
+
+      <article class="card" role="listitem">
+        <h2>AWS</h2>
+        <p>Cloud platform offering compute, storage, databases, and managed services.</p>
+        <span class="badge">Cloud</span>
+      </article>
+
+      <article class="card" role="listitem">
+        <h2>Azure</h2>
+        <p>Microsoft’s cloud platform for building, deploying, and managing apps.</p>
+        <span class="badge">Cloud</span>
+      </article>
+    </div>
+
+    <!-- About Section -->
+    <section>
+      <h3>About this Mini Project</h3>
+      <p>
+        This single‑page site demonstrates a clean layout, responsive grid, and concise descriptions of popular DevOps tools—perfect for a quick submission or portfolio snippet.
+      </p>
+      <p class="note">
+        Tip: Host this page using GitHub Pages, Netlify, or any static server to share it easily.
+      </p>
+      <a class="cta" href="#" onclick="alert('This is a static demo page. Replace # with your portfolio or repo link!'); return false;">View Source / Portfolio</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Mini Project • DevOps Tools Overview • Built with ❤️ using HTML & CSS
+  </footer>
+</body>
+</html>
